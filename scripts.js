@@ -3,7 +3,7 @@
  * PORTFÓLIO PESSOAL - JAVASCRIPT
  * ========================================
  * Script principal para gerenciar a navegação e interações
- * Autor: Célio Santiago
+ * Autor: Célio Marcos Moreira Santiago - UNINTER
  * Versão: 1.0
  */
 
@@ -423,5 +423,4 @@ document.addEventListener('DOMContentLoaded', function() {
         'font-size: 14px; color: #10b981;');
     console.log('%c📧 Entre em contato: celiomarcos@gmail.com', 
         'font-size: 14px; color: #94a3b8;');
-    
 });

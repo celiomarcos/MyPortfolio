@@ -1,90 +1,323 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Metadados essenciais para o navegador -->
+    <!-- Metadados essenciais -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio - Célio Marcos Moreira Santiago</title>
-    <meta name="description" content="Um portfólio de desenvolvedor web, com informações sobre habilidades, projetos e contatos.">
+    <meta name="description" content="Portfólio pessoal de Célio Marcos Moreira Santiago - Desenvolvedor Python">
     <meta name="keywords" content="portfólio, desenvolvedor web, Python, projetos, contato, Célio Marcos Moreira Santiago, backend, automação, análise de dados">
-
-    <!-- Link para a folha de estilos externa -->
+    <meta name="author" content="Célio Marcos Moreira Santiago">
+    <title>Portfólio - Célio Marcos Moreira Santiago | Desenvolvedor Python</title>
+    
+    <!-- Link para folha de estilos externa -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Pré-conexão com o Google Fonts para otimizar o carregamento da fonte -->
+    <!-- Pré-conexão com Google Fonts para otimização -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Importação da fonte 'Poppins' do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Cabeçalho e Navegação Principal -->
+    <!-- Cabeçalho Principal com Navegação -->
     <header class="main-header">
-        <nav class="main-nav">
-            <!-- Lista de links para navegação entre as seções -->
-            <ul>
-                <!-- Cada item da lista é um link que aponta para uma seção específica da página -->
-                <li><a href="#sobre" class="nav-link active">Sobre Mim</a></li>
-                <li><a href="#formacao" class="nav-link">Formação</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
-                <li><a href="#contato" class="nav-link">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1 class="site-title">Célio Marcos Moreira Santiago</h1>
+            <p class="site-subtitle">Desenvolvedor Python | Análise de Dados | Automação</p>
+            
+            <!-- Menu de Navegação Principal -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#sobre" class="nav-link active">Sobre Mim</a></li>
+                    <li><a href="#formacao" class="nav-link">Formação</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Conteúdo Principal da Página -->
-    <main>
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
         <!-- Seção: Sobre Mim -->
         <section id="sobre" class="content-section active">
             <div class="container">
-                <h2>Sobre Mim</h2>
-                <p>Olá! Sou um desenvolvedor Python apaixonado por criar soluções eficientes e inovadoras. Tenho experiência em desenvolvimento backend, automação de tarefas e análise de dados. Fora do trabalho, gosto de explorar novas tecnologias, contribuir para projetos open-source e jogar videogames.</p>
-                <h3>Hobbies e Interesses</h3>
-                <ul>
-                    <li>Desenvolvimento de Software</li>
-                    <li>Contribuição para Projetos Open-Source</li>
-                    <li>Jogos Eletrônicos</li>
-                    <li>Aprendizado Contínuo em Tecnologia</li>
-                </ul>
+                <h2 class="section-title">Sobre Mim</h2>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Olá! Meu nome é <strong>Célio Marcos Moreira Santiago</strong> e sou apaixonado por tecnologia e desenvolvimento de software. Como desenvolvedor Python, dedico-me a criar soluções eficientes e inovadoras que fazem a diferença no dia a dia das pessoas e empresas.</p>
+                        
+                        <p>Minha jornada na programação começou há alguns anos, quando descobri o poder da automação e análise de dados. Desde então, venho aprimorando minhas habilidades e expandindo meu conhecimento em diversas áreas da tecnologia.</p>
+                        
+                        <p>Atualmente, estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> na Universidade Uninter, onde aprofundo meus conhecimentos teóricos e práticos em desenvolvimento web, banco de dados, algoritmos e estruturas de dados.</p>
+                    </div>
+                    
+                    <div class="skills-interests">
+                        <h3>Habilidades Técnicas</h3>
+                        <ul class="skills-list">
+                            <li>Python (Django, Flask, FastAPI)</li>
+                            <li>Análise de Dados (Pandas, NumPy, Matplotlib)</li>
+                            <li>Automação de Processos</li>
+                            <li>Desenvolvimento Web (HTML5, CSS3, JavaScript)</li>
+                            <li>Banco de Dados (SQL, PostgreSQL, MySQL)</li>
+                            <li>Controle de Versão (Git/GitHub)</li>
+                        </ul>
+                        
+                        <h3>Hobbies e Interesses</h3>
+                        <ul class="hobbies-list">
+                            <li>🎮 Jogos Eletrônicos - Adoro jogos de estratégia e RPG</li>
+                            <li>💻 Contribuição Open Source - Participo ativamente de projetos no GitHub</li>
+                            <li>📚 Aprendizado Contínuo - Sempre buscando novas tecnologias</li>
+                            <li>🎸 Música - Toco guitarra nas horas vagas</li>
+                            <li>🏃 Exercícios - Corrida e academia para manter o equilíbrio</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Seção: Formação -->
         <section id="formacao" class="content-section">
             <div class="container">
-                <h2>Formação Educacional e Idiomas</h2>
-                <h3>Educação</h3>
-                <p><strong>Análise e Desenvolvimento de Sistemas</strong> - Universidade Uninter (Cursando)</p>
-                <h3>Idiomas</h3>
-                <p><strong>Português:</strong> Nativo</p>
-                <p><strong>Inglês:</strong> Avançado</p>
-
-                <h3>Certificações</h3>
-                <p><strong>Desenvolvimento Web com Django</strong> - Curso Online (2024)</p>
-                <p><strong>Automação de Tarefas com Python</strong> - Curso Online (2023)</p>
-                <p><strong>Análise de Dados com Python</strong> - Curso Online (2023)</p>
-                <p><strong>Python para Ciência de Dados</strong> - Curso Online (2024)</p>
-                <p><strong>Python para Machine Learning</strong> - Curso Online (2024)</p>
+                <h2 class="section-title">Formação Educacional</h2>
+                
+                <!-- Educação Formal -->
+                <div class="education-block">
+                    <h3>Graduação</h3>
+                    <div class="education-item">
+                        <h4>Análise e Desenvolvimento de Sistemas</h4>
+                        <p class="institution">Universidade Uninter</p>
+                        <p class="period">2025 - Presente (Cursando 2º período)</p>
+                        <p class="description">Curso focado em desenvolvimento de software, análise de sistemas, banco de dados, programação web e mobile, metodologias ágeis e gestão de projetos de TI.</p>
+                    </div>
+                </div>
+                
+                <!-- Certificações -->
+                <div class="certifications-block">
+                    <h3>Certificações e Cursos</h3>
+                    <div class="certification-grid">
+                        <div class="certification-item">
+                            <h4>Python para Ciência de Dados</h4>
+                            <p class="institution">DataCamp</p>
+                            <p class="year">2023</p>
+                        </div>
+                        
+                        <div class="certification-item">
+                            <h4>Desenvolvimento Web com Django</h4>
+                            <p class="institution">Udemy</p>
+                            <p class="year">2023</p>
+                        </div>
+                        
+                        <div class="certification-item">
+                            <h4>Machine Learning com Python</h4>
+                            <p class="institution">Coursera</p>
+                            <p class="year">2023</p>
+                        </div>
+                        
+                        <div class="certification-item">
+                            <h4>Automação de Tarefas com Python</h4>
+                            <p class="institution">Alura</p>
+                            <p class="year">2023</p>
+                        </div>
+                        
+                        <div class="certification-item">
+                            <h4>SQL para Análise de Dados</h4>
+                            <p class="institution">Digital Innovation One</p>
+                            <p class="year">2022</p>
+                        </div>
+                        
+                        <div class="certification-item">
+                            <h4>Git e GitHub Completo</h4>
+                            <p class="institution">Rocketseat</p>
+                            <p class="year">2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Idiomas -->
+                <div class="languages-block">
+                    <h3>Idiomas</h3>
+                    <div class="language-list">
+                        <div class="language-item">
+                            <h4>Português</h4>
+                            <div class="language-level">
+                                <span class="level-text">Nativo</span>
+                                <div class="level-bar">
+                                    <div class="level-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="language-item">
+                            <h4>Inglês</h4>
+                            <div class="language-level">
+                                <span class="level-text">Avançado</span>
+                                <div class="level-bar">
+                                    <div class="level-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <p class="language-desc">Leitura e escrita fluentes, conversação avançada, experiência com documentação técnica</p>
+                        </div>
+                        
+                        <div class="language-item">
+                            <h4>Espanhol</h4>
+                            <div class="language-level">
+                                <span class="level-text">Básico</span>
+                                <div class="level-bar">
+                                    <div class="level-fill" style="width: 30%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Seção: Portfólio -->
         <section id="portfolio" class="content-section">
             <div class="container">
-                <h2>Meus Projetos</h2>
+                <h2 class="section-title">Meus Projetos</h2>
+                <p class="section-subtitle">Conheça alguns dos projetos que desenvolvi durante minha jornada</p>
+                
                 <div class="portfolio-grid">
-                    <!-- Item 1 do Portfólio: Horas Úteis BR -->
+                    <!-- Projeto 1: Horas Úteis BR -->
                     <div class="portfolio-item">
-                        <h3>Horas Úteis BR</h3>
-                        <p>Uma biblioteca em Python para calcular horas e dias úteis no Brasil. A ferramenta leva em consideração feriados nacionais, estaduais e municipais para fornecer cálculos precisos.</p>
-                        <a href="https://github.com/celiomarcos/horasuteis-br" target="_blank" rel="noopener noreferrer" class="portfolio-link">Ver no GitHub</a>
+                        <div class="portfolio-image">
+                            <div class="project-icon">📅</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Horas Úteis BR</h3>
+                            <p class="project-description">
+                                Biblioteca Python robusta para cálculo preciso de horas e dias úteis no Brasil. 
+                                O sistema considera feriados nacionais, estaduais e municipais, oferecendo uma 
+                                API simples e intuitiva para desenvolvedores.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">DateTime</span>
+                                <span class="tech-tag">PyPI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/celiomarcos/horasuteis-br" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    Ver no GitHub →
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Item 2 do Portfólio: Anjos de Patas -->
+                    
+                    <!-- Projeto 2: Anjos de Patas -->
                     <div class="portfolio-item">
-                        <h3>Cadastro Anjos de Patas</h3>
-                        <p>Um sistema de cadastro desenvolvido para a ONG "Anjos de Patas", com o objetivo de gerenciar informações de animais para adoção, voluntários e doações.</p>
-                        <a href="https://github.com/celiomarcos/anjosdepatas-cadastro" target="_blank" rel="noopener noreferrer" class="portfolio-link">Ver no GitHub</a>
+                        <div class="portfolio-image">
+                            <div class="project-icon">🐾</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Sistema Anjos de Patas</h3>
+                            <p class="project-description">
+                                Sistema completo de gerenciamento para a ONG "Anjos de Patas". Inclui cadastro 
+                                de animais para adoção, gestão de voluntários, controle de doações e relatórios 
+                                administrativos.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/celiomarcos/anjosdepatas-cadastro" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    Ver no GitHub →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 3: Análise de Dados COVID -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="project-icon">📊</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Dashboard COVID-19 Brasil</h3>
+                            <p class="project-description">
+                                Dashboard interativo para visualização de dados da pandemia no Brasil. 
+                                Análise temporal, geográfica e estatística com gráficos dinâmicos e 
+                                atualizações automáticas.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Plotly</span>
+                                <span class="tech-tag">Streamlit</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link disabled">Em desenvolvimento</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 4: Bot Telegram -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="project-icon">🤖</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Bot Assistente Telegram</h3>
+                            <p class="project-description">
+                                Bot inteligente para Telegram com múltiplas funcionalidades: lembretes, 
+                                conversão de moedas, previsão do tempo e integração com APIs externas.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">python-telegram-bot</span>
+                                <span class="tech-tag">APIs REST</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link disabled">Repositório privado</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 5: E-commerce -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="project-icon">🛒</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>E-commerce Flask</h3>
+                            <p class="project-description">
+                                Loja virtual completa desenvolvida com Flask. Sistema de carrinho, 
+                                pagamento integrado, painel administrativo e gestão de estoque.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">SQLAlchemy</span>
+                                <span class="tech-tag">Stripe API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link disabled">Em breve</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 6: Automação Web -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="project-icon">⚡</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Web Scraper Imobiliário</h3>
+                            <p class="project-description">
+                                Sistema automatizado para coleta de dados imobiliários de múltiplos sites. 
+                                Análise de preços, tendências de mercado e geração de relatórios.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Selenium</span>
+                                <span class="tech-tag">BeautifulSoup</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link disabled">Código sob NDA</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,35 +326,84 @@
         <!-- Seção: Contato -->
         <section id="contato" class="content-section">
             <div class="container">
-                <h2>Entre em Contato</h2>
-                <p>Gostaria de falar sobre um projeto ou oportunidade? Me envie uma mensagem!</p>
-                <!-- Formulário de contato funcional com serviço da Formspree -->
-                <form class="contact-form" action="https://formspree.io/f/xvgrnlyr" method="post">
-                    <div class="form-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" required>
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Vamos conversar sobre seu próximo projeto!</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <p>Estou sempre aberto a novas oportunidades e desafios. Se você tem um projeto interessante ou precisa de ajuda com desenvolvimento Python, análise de dados ou automação, não hesite em entrar em contato!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <span class="contact-icon">📧</span>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>celiomarcos@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <span class="contact-icon">💼</span>
+                                <div>
+                                    <h4>LinkedIn</h4>
+                                    <p>linkedin.com/in/celiomoreirasantiago/</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <span class="contact-icon">🐙</span>
+                                <div>
+                                    <h4>GitHub</h4>
+                                    <p>github.com/celiomarcos</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                    
+                    <div class="contact-form-wrapper">
+                        <h3>Envie uma Mensagem</h3>
+                        <!-- Formulário funcional com Formspree -->
+                        <form class="contact-form" action="https://formspree.io/f/xvgrnlyr" method="POST">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="assunto">Assunto</label>
+                                <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="6" placeholder="Sua mensagem..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-button">
+                                Enviar Mensagem
+                            </button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Enviar Mensagem</button>
-                </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Rodapé da Página -->
+    <!-- Rodapé -->
     <footer class="main-footer">
-        © 2025 Célio Marcos Moreira Santiago - Todos os direitos reservados.
+        <div class="container">
+            <p>&copy; 2025 Célio Santiago - Todos os direitos reservados</p>
+            <p>Desenvolvido com HTML5, CSS3 e JavaScript puro</p>
+        </div>
     </footer>
 
-    <!-- Scripts personalizados -->
+    <!-- Script JavaScript -->
     <script src="scripts.js"></script>
-
 </body>
 </html>

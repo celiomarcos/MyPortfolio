@@ -3,7 +3,7 @@
  * PORTFÓLIO PESSOAL - JAVASCRIPT
  * ========================================
  * Script principal para gerenciar a navegação e interações
- * Autor: Célio Marcos Moreira Santiago - UNINTER 
+ * Autor: Célio Santiago
  * Versão: 1.0
  */
 
@@ -117,44 +117,110 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ========================================
-    // VALIDAÇÃO DO FORMULÁRIO
+    // VALIDAÇÃO E ENVIO DO FORMULÁRIO
     // ========================================
     
     /**
-     * Valida o formulário de contato antes do envio
+     * Manipula o envio do formulário com Formspree
      */
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            // Obtém os valores dos campos
+    const form = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-button');
+    
+    if (form) {
+        async function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Obtém os valores dos campos para validação
             const nome = document.getElementById('nome').value.trim();
             const email = document.getElementById('email').value.trim();
             const mensagem = document.getElementById('mensagem').value.trim();
             
             // Validação básica
             if (nome.length < 3) {
-                event.preventDefault();
-                alert('Por favor, insira um nome válido (mínimo 3 caracteres).');
+                showFormMessage('Por favor, insira um nome válido (mínimo 3 caracteres).', 'error');
                 return;
             }
             
             if (!isValidEmail(email)) {
-                event.preventDefault();
-                alert('Por favor, insira um email válido.');
+                showFormMessage('Por favor, insira um email válido.', 'error');
                 return;
             }
             
             if (mensagem.length < 10) {
-                event.preventDefault();
-                alert('Por favor, escreva uma mensagem mais detalhada (mínimo 10 caracteres).');
+                showFormMessage('Por favor, escreva uma mensagem mais detalhada (mínimo 10 caracteres).', 'error');
                 return;
             }
             
-            // Se tudo estiver válido, mostra mensagem de envio
-            if (submitButton) {
-                submitButton.textContent = 'Enviando...';
-                submitButton.disabled = true;
+            // Mostra estado de envio
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.classList.add('sending');
+            
+            // Envia o formulário
+            const data = new FormData(event.target);
+            
+            try {
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Sucesso
+                    showFormMessage('✅ Mensagem enviada com sucesso! Entrarei em contato em breve.', 'success');
+                    form.reset();
+                    
+                    // Efeito de sucesso
+                    form.classList.add('form-success');
+                    setTimeout(() => {
+                        form.classList.remove('form-success');
+                    }, 1000);
+                } else {
+                    // Erro no servidor
+                    const errorData = await response.json();
+                    if (errorData.errors) {
+                        const errorMessages = errorData.errors.map(error => error.message).join(', ');
+                        showFormMessage(`❌ Erro: ${errorMessages}`, 'error');
+                    } else {
+                        showFormMessage('❌ Oops! Houve um problema ao enviar sua mensagem. Tente novamente.', 'error');
+                    }
+                }
+            } catch (error) {
+                // Erro de rede
+                showFormMessage('❌ Erro de conexão. Verifique sua internet e tente novamente.', 'error');
+                console.error('Erro ao enviar formulário:', error);
+            } finally {
+                // Restaura o botão
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Enviar Mensagem';
+                submitBtn.classList.remove('sending');
             }
-        });
+        }
+        
+        // Adiciona o listener do formulário
+        form.addEventListener('submit', handleSubmit);
+    }
+    
+    /**
+     * Exibe mensagem de status do formulário
+     * @param {string} message - Mensagem a ser exibida
+     * @param {string} type - Tipo da mensagem (success, error)
+     */
+    function showFormMessage(message, type) {
+        formStatus.textContent = message;
+        formStatus.className = `form-status ${type}`;
+        formStatus.style.display = 'block';
+        
+        // Remove a mensagem após 5 segundos se for sucesso
+        if (type === 'success') {
+            setTimeout(() => {
+                formStatus.style.display = 'none';
+            }, 5000);
+        }
     }
     
     /**

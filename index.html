@@ -68,8 +68,8 @@
                             <li>🎮 Jogos Eletrônicos - Adoro jogos de estratégia e RPG</li>
                             <li>💻 Contribuição Open Source - Participo ativamente de projetos no GitHub</li>
                             <li>📚 Aprendizado Contínuo - Sempre buscando novas tecnologias</li>
-                            <li>🎸 Música - Toco guitarra nas horas vagas</li>
-                            <li>🏃 Exercícios - Corrida e academia para manter o equilíbrio</li>
+                            <li>🎸 Música - Tento tocar violão nas horas vagas</li>
+                            <li>🏃 Exercícios - Natação e academia para manter o equilíbrio</li>
                         </ul>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                         <div class="certification-item">
                             <h4>Machine Learning com Python</h4>
                             <p class="institution">Coursera</p>
-                            <p class="year">2023</p>
+                            <p class="year">2024</p>
                         </div>
                         
                         <div class="certification-item">
@@ -143,7 +143,7 @@
                             <div class="language-level">
                                 <span class="level-text">Nativo</span>
                                 <div class="level-bar">
-                                    <div class="level-fill level-width-30"></div>
+                                    <div class="level-fill level-fill-100"></div>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                             <div class="language-level">
                                 <span class="level-text">Avançado</span>
                                 <div class="level-bar">
-                                    <div class="level-fill level-width-85"></div>
+                                    <div class="level-fill level-fill-85"></div>
                                 </div>
                             </div>
                             <p class="language-desc">Leitura e escrita fluentes, conversação avançada, experiência com documentação técnica</p>
@@ -164,7 +164,7 @@
                             <div class="language-level">
                                 <span class="level-text">Básico</span>
                                 <div class="level-bar">
-                                    <div class="level-fill level-width-30"></div>
+                                    <div class="level-fill level-fill-30"></div>
                                 </div>
                             </div>
                         </div>
@@ -363,8 +363,8 @@
                     
                     <div class="contact-form-wrapper">
                         <h3>Envie uma Mensagem</h3>
-                        <!-- Formulário funcional com Formspree -->
-                        <form class="contact-form" action="https://formspree.io/f/xvgrnlyr" method="post">
+                        <!-- Formulário funcional com Formspree e feedback em tempo real -->
+                        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xvgrnlyr" method="post">
                             <div class="form-group">
                                 <label for="nome">Nome Completo</label>
                                 <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
@@ -382,12 +382,15 @@
                             
                             <div class="form-group">
                                 <label for="mensagem">Mensagem</label>
-                                <textarea id="mensagem" name="mensagem" rows="6" placeholder="Sua mensagem..." required></textarea>
+                                <textarea id="mensagem" name="message" rows="6" placeholder="Sua mensagem..." required></textarea>
                             </div>
                             
-                            <button type="submit" class="submit-button">
+                            <button id="submit-button" type="submit" class="submit-button">
                                 Enviar Mensagem
                             </button>
+                            
+                            <!-- Status do formulário -->
+                            <p id="form-status" class="form-status"></p>
                         </form>
                     </div>
                 </div>

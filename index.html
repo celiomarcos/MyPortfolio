@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Metadados essenciais para o navegador -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio - Célio Marcos Moreira Santiago</title>
+    <meta name="description" content="Um portfólio de desenvolvedor web, com informações sobre habilidades, projetos e contatos.">
+    <meta name="keywords" content="portfólio, desenvolvedor web, Python, projetos, contato, Célio Marcos Moreira Santiago, backend, automação, análise de dados">
+
+    <!-- Link para a folha de estilos externa -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Pré-conexão com o Google Fonts para otimizar o carregamento da fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importação da fonte 'Poppins' do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cabeçalho e Navegação Principal -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <!-- Lista de links para navegação entre as seções -->
+            <ul>
+                <!-- Cada item da lista é um link que aponta para uma seção específica da página -->
+                <li><a href="#sobre" class="nav-link active">Sobre Mim</a></li>
+                <li><a href="#formacao" class="nav-link">Formação</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal da Página -->
+    <main>
+        <!-- Seção: Sobre Mim -->
+        <section id="sobre" class="content-section active">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Sou um desenvolvedor Python apaixonado por criar soluções eficientes e inovadoras. Tenho experiência em desenvolvimento backend, automação de tarefas e análise de dados. Fora do trabalho, gosto de explorar novas tecnologias, contribuir para projetos open-source e jogar videogames.</p>
+                <h3>Hobbies e Interesses</h3>
+                <ul>
+                    <li>Desenvolvimento de Software</li>
+                    <li>Contribuição para Projetos Open-Source</li>
+                    <li>Jogos Eletrônicos</li>
+                    <li>Aprendizado Contínuo em Tecnologia</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção: Formação -->
+        <section id="formacao" class="content-section">
+            <div class="container">
+                <h2>Formação Educacional e Idiomas</h2>
+                <h3>Educação</h3>
+                <p><strong>Análise e Desenvolvimento de Sistemas</strong> - Universidade Uninter (Cursando)</p>
+                <h3>Idiomas</h3>
+                <p><strong>Português:</strong> Nativo</p>
+                <p><strong>Inglês:</strong> Avançado</p>
+
+                <h3>Certificações</h3>
+                <p><strong>Desenvolvimento Web com Django</strong> - Curso Online (2023)</p>
+                <p><strong>Automação de Tarefas com Python</strong> - Curso Online (2023)</p>
+                <p><strong>Análise de Dados com Python</strong> - Curso Online (2023)</p>
+                <p><strong>Python para Ciência de Dados</strong> - Curso Online (2023)</p>
+                <p><strong>Python para Machine Learning</strong> - Curso Online (2023)</p>
+            </div>
+        </section>
+
+        <!-- Seção: Portfólio -->
+        <section id="portfolio" class="content-section">
+            <div class="container">
+                <h2>Meus Projetos</h2>
+                <div class="portfolio-grid">
+                    <!-- Item 1 do Portfólio: Horas Úteis BR -->
+                    <div class="portfolio-item">
+                        <h3>Horas Úteis BR</h3>
+                        <p>Uma biblioteca em Python para calcular horas e dias úteis no Brasil. A ferramenta leva em consideração feriados nacionais, estaduais e municipais para fornecer cálculos precisos.</p>
+                        <a href="https://github.com/celiomarcos/horasuteis-br" target="_blank" rel="noopener noreferrer" class="portfolio-link">Ver no GitHub</a>
+                    </div>
+                    <!-- Item 2 do Portfólio: Anjos de Patas -->
+                    <div class="portfolio-item">
+                        <h3>Cadastro Anjos de Patas</h3>
+                        <p>Um sistema de cadastro desenvolvido para a ONG "Anjos de Patas", com o objetivo de gerenciar informações de animais para adoção, voluntários e doações.</p>
+                        <a href="https://github.com/celiomarcos/anjosdepatas-cadastro" target="_blank" rel="noopener noreferrer" class="portfolio-link">Ver no GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Contato -->
+        <section id="contato" class="content-section">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Gostaria de falar sobre um projeto ou oportunidade? Me envie uma mensagem!</p>
+                <!-- Formulário de contato funcional com serviço da Formspree -->
+                <form class="contact-form" action="https://formspree.io/f/xvgrnlyr" method="post">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé da Página -->
+    <footer class="main-footer">
+        © 2025 Célio Marcos Moreira Santiago - Todos os direitos reservados.
+    </footer>
+
+    <!-- Scripts personalizados -->
+    <script src="scripts.js"></script>
+
+</body>
+</html>
